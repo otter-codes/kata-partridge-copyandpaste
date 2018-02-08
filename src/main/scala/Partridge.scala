@@ -20,6 +20,7 @@ object Partridge {
     val n = x match {
       case i: Int => i
       case s: String => s.toInt
+      case _ => throw new IllegalArgumentException("Nah bruv, gotta be an Int or String")
     }
     if (n * n > 1000) {
       "It's hotter than the sun!!"
