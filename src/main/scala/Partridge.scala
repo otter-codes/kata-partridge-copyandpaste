@@ -17,11 +17,28 @@ object Partridge {
 
 
   def apple(x: Any): String = {
-    ???
+    val n = x match {
+      case i: Int => i
+      case s: String => s.toInt
+    }
+    if (n * n > 1000) {
+      "It's hotter than the sun!!"
+    } else {
+      "Help yourself to a honeycomb Yorkie for the glovebox"
+    }
   }
 
   def london(args: Array[String]): String = {
-    ???
+
+    val stations = Array("Rejection", "Disappointment", "Backstabbing Central", "Shattered Dreams Parkway")
+
+    val x = args.filter(x => stations.contains(x))
+
+    if (x sameElements stations ) {
+      "Smell my cheese you mother!"
+    } else {
+      "No, seriously, run. You will miss it."
+    }
   }
 
 }
