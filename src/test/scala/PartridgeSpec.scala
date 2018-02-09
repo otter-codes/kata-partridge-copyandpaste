@@ -52,6 +52,12 @@ class PartridgeSpec extends WordSpec with MustMatchers {
         Partridge.apple("50") mustEqual "It's hotter than the sun!!"
       }
 
+      "throw an exception when given a boolean" in {
+        intercept[IllegalArgumentException] {
+          Partridge.apple(true)
+        }
+      }
+
     }
 
     "london is called" must {
